@@ -12,7 +12,7 @@
 	<artifactId>plan-api</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>plan-api</name>
-	<description>member-data-loader-api</description>
+	<description>plan-api</description>
 
 	<properties>
 		<java.version>1.8</java.version>
@@ -58,6 +58,18 @@
 				</exclusion>
 			</exclusions>
 		</dependency>
+		
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-security</artifactId>
+		</dependency>
+		
+		<dependency>
+			<groupId>io.jsonwebtoken</groupId>
+			<artifactId>jjwt</artifactId>
+			<version>0.9.1</version>
+		</dependency>
+		
 	</dependencies>
 
 	<dependencyManagement>

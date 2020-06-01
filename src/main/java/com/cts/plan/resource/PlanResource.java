@@ -20,21 +20,8 @@ private static final Logger loger = LoggerFactory.getLogger(PlanResource.class);
 	
 	@Autowired
 	PlanServiceImpl planServiceImpl;
-	
-	/*
-	 * @RequestMapping(path = "/createMember", consumes = "application/json",
-	 * produces = "application/json") public void persistMemberDetails(@RequestBody
-	 * List<MemberDetail> memberList){
-	 * 
-	 * System.out.println("<<< EXECUTING RESTTEMPLET >>>");
-	 * 
-	 * for(MemberDetail member : memberList) System.out.println(member);
-	 * planServiceImpl.saveMemberDetail(memberList);
-	 * 
-	 * }
-	 */
-	
-	@GetMapping(path = "/memberDetail/{planId}", produces =  "application/json")
+		
+	@GetMapping(path = "/planDetail/{planId}", produces =  "application/json")
 	public Plans fetchPlanById(@PathVariable(value = "planId") String planId){
 		return planServiceImpl.getPlanById(planId);
 	}
